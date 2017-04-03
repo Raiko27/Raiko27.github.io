@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[segment tree]]></title>
+      <url>%2F2017%2F04%2F04%2Fsegmenttree.html</url>
+      <content type="text"><![CDATA[Segment tree from codeforces #Segment tree with single element modifications1234567891011121314151617181920212223242526272829 const int n = 1e5; int n; int t[2*n]; void build()&#123; for (int i=n-1;i&gt;0;--i) t[i] = t[i&lt;&lt;1] + t[i&lt;&lt;1|1]; &#125; void modify(int p , int value)&#123; for (t[p += n] = value;p&gt;1;P &gt;&gt;=1) t[p&gt;&gt;1]=t[p]+t[p^1]; &#125; int query(int l. int r)&#123; int res=0; for (l+=n,r+=n;l&lt;r;l&gt;&gt;=1,r&gt;&gt;=1)&#123; if (l&amp;1) res += t[l++]; if (r&amp;l) res += t[--r]; &#125; return res; &#125;int main() &#123; scanf (&quot;%d&quot;, &amp;n); for (int i=0;i&lt;n;++i) scanf (&quot;%d&quot;,t+n+i); build(); modify(0,1); printf(&quot;%d\n&quot;,query(3,11)); return 0;&#125;]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[膜你抄]]></title>
       <url>%2F2017%2F03%2F30%2Foisong.html</url>
       <content type="text"><![CDATA[一首歌 屏幕在深夜微微发亮 思想在那虚树路径上彷徨 平面的向量交错生长 织成 忧伤的网 剪枝剪去我们的疯狂 SPFA 告诉我前途在何方 01 背包装下了忧伤 笑颜 洋溢脸庞 键盘微凉 鼠标微凉 指尖流淌 代码千行 凸包周长 直径多长 一进考场 全都忘光 你在 OJ 上提交了千百遍 却依然不能卡进那时限 双手敲尽代码也敲尽岁月 只有我一人 写的题解 凋零在 OJ 里面 Tarjan 陪伴强连通分量 生成树完成后思路才闪光 欧拉跑过的七桥古塘 让你 心驰神往 队列进出图上的方向 线段树区间修改求出总量 可持久化留下的迹象 我们 伏身欣赏 数论算法 图论算法 高斯费马 树上开花 线性规划 动态规划 时间爆炸 如何优化 我在 OI 中辗转了千百天 却不让我看 AK 最后一眼 我用空间换回超限的时间 随重新编译 测完样例 才发现漏洞满篇 原来 CE 是因选错语言 其实爆零 只因忘写文件 如果标算太难请坚定信念 不如回头再看一眼题面 以那暴力模拟向正解吊唁 蒟蒻的蜕变 神犇出现 终将与 Au 擦肩 屏幕在深夜微微发亮 我心在考场]]></content>
