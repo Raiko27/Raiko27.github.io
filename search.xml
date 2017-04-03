@@ -3,9 +3,9 @@
   
     
     <entry>
-      <title><![CDATA[segment tree]]></title>
+      <title><![CDATA[Segment tree]]></title>
       <url>%2F2017%2F04%2F04%2Fsegmenttree%2F</url>
-      <content type="text"><![CDATA[Segment tree from codeforces Segment tree with single element modifications1234567891011121314151617181920212223242526272829 const int n = 1e5; int n; int t[2*n]; void build()&#123; for (int i=n-1;i&gt;0;--i) t[i] = t[i&lt;&lt;1] + t[i&lt;&lt;1|1]; &#125; void modify(int p , int value)&#123; for (t[p += n] = value;p&gt;1;P &gt;&gt;=1) t[p&gt;&gt;1]=t[p]+t[p^1]; &#125; int query(int l. int r)&#123; int res=0; for (l+=n,r+=n;l&lt;r;l&gt;&gt;=1,r&gt;&gt;=1)&#123; if (l&amp;1) res += t[l++]; if (r&amp;l) res += t[--r]; &#125; return res; &#125;int main() &#123; scanf (&quot;%d&quot;, &amp;n); for (int i=0;i&lt;n;++i) scanf (&quot;%d&quot;,t+n+i); build(); modify(0,1); printf(&quot;%d\n&quot;,query(3,11)); return 0;&#125;]]></content>
+      <content type="text"><![CDATA[Segment tree from codeforces Segment tree with single element modifications1234567891011121314151617181920212223242526272829const int n = 1e5;int n;int t[2*n]; void build()&#123; for (int i=n-1;i&gt;0;--i) t[i] = t[i&lt;&lt;1] + t[i&lt;&lt;1|1];&#125; void modify(int p , int value)&#123; for (t[p += n] = value;p&gt;1;P &gt;&gt;=1) t[p&gt;&gt;1]=t[p]+t[p^1];&#125; int query(int l. int r)&#123; int res=0; for (l+=n,r+=n;l&lt;r;l&gt;&gt;=1,r&gt;&gt;=1)&#123; if (l&amp;1) res += t[l++]; if (r&amp;l) res += t[--r]; &#125; return res;&#125; int main() &#123; scanf ("%d", &amp;n); for (int i=0;i&lt;n;++i) scanf ("%d",t+n+i); build(); modify(0,1); printf("%d\n",query(3,11)); return 0;&#125;]]></content>
     </entry>
 
     
