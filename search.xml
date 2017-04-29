@@ -3,16 +3,16 @@
   
     
     <entry>
-      <title><![CDATA[《简明数论》 整数]]></title>
-      <url>%2F2017%2F04%2F04%2Fnumber%2F</url>
-      <content type="text"><![CDATA[《简明数论》 整数： 归纳公理 数学归纳法 最小自然数原理 最大自然数原理 第二种数学归纳法 盒子原理 整数归纳公理​ 设$S$是$N$的一个子集，满足条件:(i) $1\in S$ ; (ii) 如果 $n \in S $ ，则 $ n+1 \in S$ . 那么$S = N$. 定理1（数学归纳法）设 $P(n)$ 是关于自然数 $n$ 的一个命题. 如果 ​ (i) 当$n=1$时，$P(1)$成立； ​ (ii) 由 $P(n)$ 成立必可推出 $P(n+1)$ 成立 ， 那么， $P(n)$对所有自然数n成立 . 定理2（最小自然数原理）设$T$是$N$ 的一个非空子集.那么，必有 $t_0 \in T$ ，使对任意的 $t \in T $ 有 $t_0 \le t$ ，即 $t_0$ 是 $T$ 中的最小自然数. 定理3（最大自然数原理）设 $ M $ 是 $N$ 的非空子集，若 $M$ 有上界，即存在 $a \in N$，使对任意的 $m \in M$ 有 $m \le a$，那么，必有 $m_0 \in M $ ，使对任意的 $m \in M$ 有 $m \le m_0$，即 $m_0$ 是 $M$ 中的最大自然数. 定理4 （第二种数学归纳法）设 $P(n)$ 是关于自然数 $n$ 的一个命题. 如果 ​ (i) 当$n=1$时，$P(1)$成立； ​ (ii)设 $n&gt;1$. 若对所有的自然数m&lt;n，$P(m)$ 成立，则必可推出 $P(n)$ 成立 ， 那么， $P(n)$对所有自然数n成立 . 定理5 （盒子原理）设 $n$ 是一个自然数.现有 $n$ 个盒子和 $n+1$ 个物体.无论怎样把这 $n+1$ 个物体放入这 $n$ 个盒子中，一定有一个盒子中被放了两个或两个以上的物体.]]></content>
+      <title><![CDATA[Segment tree]]></title>
+      <url>%2F2017%2F04%2F04%2Fsegmenttree%2F</url>
+      <content type="text"><![CDATA[Segment tree from codeforces Segment tree with single element modifications1234567891011121314151617181920212223242526272829const int n = 1e5;int n;int t[2*n]; void build()&#123; for (int i=n-1;i&gt;0;--i) t[i] = t[i&lt;&lt;1] + t[i&lt;&lt;1|1];&#125; void modify(int p , int value)&#123; for (t[p += n] = value;p&gt;1;P &gt;&gt;=1) t[p&gt;&gt;1]=t[p]+t[p^1];&#125; int query(int l. int r)&#123; int res=0; for (l+=n,r+=n;l&lt;r;l&gt;&gt;=1,r&gt;&gt;=1)&#123; if (l&amp;1) res += t[l++]; if (r&amp;l) res += t[--r]; &#125; return res;&#125; int main() &#123; scanf ("%d", &amp;n); for (int i=0;i&lt;n;++i) scanf ("%d",t+n+i); build(); modify(0,1); printf("%d\n",query(3,11)); return 0;&#125;]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[Segment tree]]></title>
-      <url>%2F2017%2F04%2F04%2Fsegmenttree%2F</url>
-      <content type="text"><![CDATA[Segment tree from codeforces Segment tree with single element modifications1234567891011121314151617181920212223242526272829const int n = 1e5;int n;int t[2*n]; void build()&#123; for (int i=n-1;i&gt;0;--i) t[i] = t[i&lt;&lt;1] + t[i&lt;&lt;1|1];&#125; void modify(int p , int value)&#123; for (t[p += n] = value;p&gt;1;P &gt;&gt;=1) t[p&gt;&gt;1]=t[p]+t[p^1];&#125; int query(int l. int r)&#123; int res=0; for (l+=n,r+=n;l&lt;r;l&gt;&gt;=1,r&gt;&gt;=1)&#123; if (l&amp;1) res += t[l++]; if (r&amp;l) res += t[--r]; &#125; return res;&#125; int main() &#123; scanf ("%d", &amp;n); for (int i=0;i&lt;n;++i) scanf ("%d",t+n+i); build(); modify(0,1); printf("%d\n",query(3,11)); return 0;&#125;]]></content>
+      <title><![CDATA[《简明数论》 整数]]></title>
+      <url>%2F2017%2F04%2F04%2Fnumber%2F</url>
+      <content type="text"><![CDATA[《简明数论》 整数： 归纳公理 数学归纳法 最小自然数原理 最大自然数原理 第二种数学归纳法 盒子原理 整数归纳公理​ 设$S$是$N$的一个子集，满足条件:(i) $1\in S$ ; (ii) 如果 $n \in S $ ，则 $ n+1 \in S$ . 那么$S = N$. 定理1（数学归纳法）设 $P(n)$ 是关于自然数 $n$ 的一个命题. 如果 ​ (i) 当$n=1$时，$P(1)$成立； ​ (ii) 由 $P(n)$ 成立必可推出 $P(n+1)$ 成立 ， 那么， $P(n)$对所有自然数n成立 . 定理2（最小自然数原理）设$T$是$N$ 的一个非空子集.那么，必有 $t_0 \in T$ ，使对任意的 $t \in T $ 有 $t_0 \le t$ ，即 $t_0$ 是 $T$ 中的最小自然数. 定理3（最大自然数原理）设 $ M $ 是 $N$ 的非空子集，若 $M$ 有上界，即存在 $a \in N$，使对任意的 $m \in M$ 有 $m \le a$，那么，必有 $m_0 \in M $ ，使对任意的 $m \in M$ 有 $m \le m_0$，即 $m_0$ 是 $M$ 中的最大自然数. 定理4 （第二种数学归纳法）设 $P(n)$ 是关于自然数 $n$ 的一个命题. 如果 ​ (i) 当$n=1$时，$P(1)$成立； ​ (ii)设 $n&gt;1$. 若对所有的自然数m&lt;n，$P(m)$ 成立，则必可推出 $P(n)$ 成立 ， 那么， $P(n)$对所有自然数n成立 . 定理5 （盒子原理）设 $n$ 是一个自然数.现有 $n$ 个盒子和 $n+1$ 个物体.无论怎样把这 $n+1$ 个物体放入这 $n$ 个盒子中，一定有一个盒子中被放了两个或两个以上的物体.]]></content>
     </entry>
 
     
