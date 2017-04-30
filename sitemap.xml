@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://raikoblog.tk/aboutme/index.html</loc>
+    
+    <lastmod>2017-04-30T10:57:58.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://raikoblog.tk/2017/04/04/number/</loc>
     
     <lastmod>2017-04-30T04:19:47.000Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://raikoblog.tk/2017/04/04/segmenttree/</loc>
     
     <lastmod>2017-04-03T17:26:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://raikoblog.tk/aboutme/index.html</loc>
-    
-    <lastmod>2017-04-03T15:55:36.000Z</lastmod>
     
   </url>
   
