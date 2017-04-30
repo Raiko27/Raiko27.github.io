@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>RaikoX | 指尖流淌  代码千行</title>
+    <title>Segment tree | RaikoX</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="黑暗之中若能绽放光芒 &lt;br/&gt; 便会化作璀璨星空 xD">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="RaikoX | 指尖流淌  代码千行">
+    <meta name="twitter:title" content="Segment tree | RaikoX">
     <meta name="twitter:description" content="黑暗之中若能绽放光芒 &lt;br/&gt; 便会化作璀璨星空 xD">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="RaikoX | 指尖流淌  代码千行">
+    <meta property="og:title" content="Segment tree | RaikoX">
     <meta property="og:description" content="黑暗之中若能绽放光芒 &lt;br/&gt; 便会化作璀璨星空 xD">
 
     
@@ -38,7 +38,7 @@
     <link rel="alternate" type="application/rss+xml" title="RaikoX" href="/atom.xml">
     
 
-    <link rel="canonical" href="http://raikoblog.tk"/>
+    <link rel="canonical" href="http://raikoblog.tk/2017/04/04/segmenttree/"/>
 
     
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -60,7 +60,7 @@
     </span>
 
     
-<header class="panel-cover " style="background-image: url(/images/123333.jpg)">
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/123333.jpg)">
   <div class="panel-main">
     <div class="panel-main__inner panel-inverted">
     <div class="panel-main__content">
@@ -176,78 +176,71 @@
 
     <div class="content-wrapper">
         <div class="content-wrapper__inner">
-            <div class="main-post-list">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2017-04-03T16:48:21.000Z" class="post-list__meta--date date">2017-04-04</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/oi/">oi</a>, <a class="tag-link" href="/tags/数据结构/">数据结构</a>
+ </span>
+      <span class="page-pv">
+      &nbsp;阅读&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+      </span> 
+   
+    </div>
+    <h1 class="post-title">Segment tree</h1>
+  </header>
+
+  <section class="post">
+    <p>Segment tree from codeforces<br><a id="more"></a></p>
+<h3 id="Segment-tree-with-single-element-modifications"><a href="#Segment-tree-with-single-element-modifications" class="headerlink" title="Segment tree with single element modifications"></a>Segment tree with single element modifications</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> n = <span class="number">1e5</span>;</div><div class="line"><span class="keyword">int</span> n;</div><div class="line"><span class="keyword">int</span> t[<span class="number">2</span>*n];  </div><div class="line">  </div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=n<span class="number">-1</span>;i&gt;<span class="number">0</span>;--i) t[i] = t[i&lt;&lt;<span class="number">1</span>] + t[i&lt;&lt;<span class="number">1</span>|<span class="number">1</span>];</div><div class="line">&#125;  </div><div class="line">  </div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">modify</span><span class="params">(<span class="keyword">int</span> p , <span class="keyword">int</span> value)</span></span>&#123;</div><div class="line">    <span class="keyword">for</span> (t[p += n] = value;p&gt;<span class="number">1</span>;P &gt;&gt;=<span class="number">1</span>) t[p&gt;&gt;<span class="number">1</span>]=t[p]+t[p^<span class="number">1</span>];</div><div class="line">&#125;  </div><div class="line">  </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> l. <span class="keyword">int</span> r)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> res=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (l+=n,r+=n;l&lt;r;l&gt;&gt;=<span class="number">1</span>,r&gt;&gt;=<span class="number">1</span>)&#123;</div><div class="line">        <span class="keyword">if</span> (l&amp;<span class="number">1</span>) res += t[l++];</div><div class="line">        <span class="keyword">if</span> (r&amp;l) res += t[--r];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">&#125;  </div><div class="line">  </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="built_in">scanf</span> (<span class="string">"%d"</span>, &amp;n);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;++i) <span class="built_in">scanf</span> (<span class="string">"%d"</span>,t+n+i);</div><div class="line">    build();</div><div class="line">    modify(<span class="number">0</span>,<span class="number">1</span>);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,query(<span class="number">3</span>,<span class="number">11</span>));</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+  </section>
+
+</article>
+<section class="read-more">
+           
     
-  <ol class="post-list post">
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2017/04/04/number/" title="link to post.title">《简明数论》 整数</a></h2>
-      <p class="excerpt">
-    
-      《简明数论》 整数：
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">最近的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2017/04/04/number/" title="《简明数论》 整数">《简明数论》 整数</a></h2>
+                <p class="excerpt">
+                
+                《简明数论》 整数：
  归纳公理       数学归纳法 
 
  最小自然数原理 最大自然数原理  
 
  第二种数学归纳法  盒子原理
-    
-      </p>
-      <div class="post-list__meta"><time datetime="2017-04-03T16:48:21.000Z" class="post-list__meta--date date">2017-04-04</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+                
+                </p>
+                <div class="post-list__meta"><time datetime="2017-04-03T16:48:21.000Z" class="post-list__meta--date date">2017-04-04</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
   <a class="tag-link" href="/tags/数论/">数论</a>
 </span><a class="btn-border-small" href="/2017/04/04/number/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2017/04/04/segmenttree/" title="link to post.title">Segment tree</a></h2>
-      <p class="excerpt">
-    
-      Segment tree from codeforces
-    
-      </p>
-      <div class="post-list__meta"><time datetime="2017-04-03T16:48:21.000Z" class="post-list__meta--date date">2017-04-04</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/oi/">oi</a>, <a class="tag-link" href="/tags/数据结构/">数据结构</a>
-</span><a class="btn-border-small" href="/2017/04/04/segmenttree/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2017/03/30/oisong/" title="link to post.title">膜你抄</a></h2>
-      <p class="excerpt">
-    
-      一首歌
-    
-      </p>
-      <div class="post-list__meta"><time datetime="2017-03-30T14:35:24.000Z" class="post-list__meta--date date">2017-03-30</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+                           
+            </div>
+        
+        
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">更早的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2017/03/30/oisong/" title="膜你抄">膜你抄</a></h2>
+                <p class="excerpt">
+                
+                一首歌
+                
+                </p>
+                <div class="post-list__meta"><time datetime="2017-03-30T14:35:24.000Z" class="post-list__meta--date date">2017-03-30</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
   <a class="tag-link" href="/tags/oi/">oi</a>
 </span><a class="btn-border-small" href="/2017/03/30/oisong/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
+                       
+            </div>
+        
+     
+   
+   
   
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2017/03/25/sodagreen/" title="link to post.title">苏打绿  Sodagreen</a></h2>
-      <p class="excerpt">
-    
-      喜欢苏打绿 从始至终 
-本文为苏打绿歌曲中部分歌词摘录
-    
-      </p>
-      <div class="post-list__meta"><time datetime="2017-03-24T16:23:54.000Z" class="post-list__meta--date date">2017-03-25</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/苏打绿/">苏打绿</a>
-</span><a class="btn-border-small" href="/2017/03/25/sodagreen/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-  </ol>
-
-
-
-</div>
+</section>
 
 
             
