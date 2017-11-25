@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://raikoblog.tk/"/>
-  <updated>2017-05-12T13:48:28.000Z</updated>
+  <updated>2017-05-06T10:13:06.000Z</updated>
   <id>http://raikoblog.tk/</id>
   
   <author>
@@ -14,28 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>日常情感</title>
-    <link href="http://raikoblog.tk/2017/05/12/new/"/>
-    <id>http://raikoblog.tk/2017/05/12/new/</id>
-    <published>2017-05-12T06:20:00.000Z</published>
-    <updated>2017-05-12T13:48:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="路漫漫其修远兮"><a href="#路漫漫其修远兮" class="headerlink" title="路漫漫其修远兮"></a>路漫漫其修远兮</h1><p>  有时候只觉得<br>  心好累<br>  好冰冷啊…</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;路漫漫其修远兮&quot;&gt;&lt;a href=&quot;#路漫漫其修远兮&quot; class=&quot;headerlink&quot; title=&quot;路漫漫其修远兮&quot;&gt;&lt;/a&gt;路漫漫其修远兮&lt;/h1&gt;&lt;p&gt;  有时候只觉得&lt;br&gt;  心好累&lt;br&gt;  好冰冷啊…&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-      <category term="情感" scheme="http://raikoblog.tk/tags/%E6%83%85%E6%84%9F/"/>
-    
-  </entry>
   
   <entry>
     <title>2017上海省选游记</title>
@@ -79,54 +57,20 @@
   </entry>
   
   <entry>
-    <title>《简明数论》 整数</title>
+    <title>但愿一切重来</title>
     <link href="http://raikoblog.tk/2017/04/04/number/"/>
     <id>http://raikoblog.tk/2017/04/04/number/</id>
     <published>2017-04-03T16:48:21.000Z</published>
-    <updated>2017-04-30T11:17:32.000Z</updated>
+    <updated>2017-11-25T13:53:55.000Z</updated>
     
-    <content type="html"><![CDATA[<p>《简明数论》 整数：</p>
-<p> 归纳公理       数学归纳法 </p>
-<p><br></p>
-<p> 最小自然数原理 最大自然数原理  </p>
-<p><br></p>
-<p> 第二种数学归纳法  盒子原理<br><a id="more"></a></p>
-<p><br></p>
-<p><br></p>
-<h3 id="归纳公理"><a href="#归纳公理" class="headerlink" title="归纳公理"></a>归纳公理</h3><p>​    设$S$是$N$的一个子集，满足条件:(i) $1\in S$ ; (ii) 如果 $n \in  S $ ，则 $ n+1 \in S$  .  那么$S = N$.</p>
-<p><br></p>
-<p><br></p>
-<h3 id="定理1（数学归纳法）"><a href="#定理1（数学归纳法）" class="headerlink" title="定理1（数学归纳法）"></a>定理1（数学归纳法）</h3><p>设 $P(n)$ 是关于自然数 $n$ 的一个命题.</p>
-<p>如果</p>
-<p>​    (i) 当$n=1$时，$P(1)$成立；</p>
-<p>​    (ii) 由 $P(n)$ 成立必可推出  $P(n+1)$ 成立 ，</p>
-<p>那么， $P(n)$对所有自然数n成立 .</p>
-<p><br></p>
-<p><br></p>
-<h3 id="定理2（最小自然数原理）"><a href="#定理2（最小自然数原理）" class="headerlink" title="定理2（最小自然数原理）"></a>定理2（最小自然数原理）</h3><p>设$T$是$N$ 的一个非空子集.那么，必有 $t_0 \in T$ ，使对任意的 $t \in T $ 有 $t_0 \le t$  ，即 $t_0$ 是  $T$ 中的最小自然数.</p>
-<p><br></p>
-<p><br></p>
-<h3 id="定理3（最大自然数原理）"><a href="#定理3（最大自然数原理）" class="headerlink" title="定理3（最大自然数原理）"></a>定理3（最大自然数原理）</h3><p>设 $ M $ 是 $N$ 的非空子集，若 $M$ 有上界，即存在 $a \in N$，使对任意的 $m \in M$ 有 $m \le a$，那么，必有 $m_0 \in M $ ，使对任意的 $m \in M$ 有 $m \le m_0$，即 $m_0$ 是 $M$ 中的最大自然数.</p>
-<p><br></p>
-<p><br></p>
-<h3 id="定理4-（第二种数学归纳法）"><a href="#定理4-（第二种数学归纳法）" class="headerlink" title="定理4 （第二种数学归纳法）"></a>定理4 （第二种数学归纳法）</h3><p>设 $P(n)$ 是关于自然数 $n$ 的一个命题.</p>
-<p>如果</p>
-<p>​    (i) 当$n=1$时，$P(1)$成立；</p>
-<p>​    (ii)设 $n&gt;1$. 若对所有的自然数m&lt;n，$P(m)$ 成立，则必可推出  $P(n)$ 成立 ，</p>
-<p>那么， $P(n)$对所有自然数n成立 .</p>
-<p><br></p>
-<p><br></p>
-<h3 id="定理5-（盒子原理）"><a href="#定理5-（盒子原理）" class="headerlink" title="定理5 （盒子原理）"></a>定理5 （盒子原理）</h3><p>设 $n$ 是一个自然数.现有 $n$ 个盒子和 $n+1$ 个物体.无论怎样把这 $n+1$ 个物体放入这  $n$ 个盒子中，一定有一个盒子中被放了两个或两个以上的物体.</p>
+    <content type="html"><![CDATA[<p>记NOIP2017</p>
+<a id="more"></a>
+<h3 id="NOIP2017"><a href="#NOIP2017" class="headerlink" title="NOIP2017"></a>NOIP2017</h3><p>待更</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;《简明数论》 整数：&lt;/p&gt;
-&lt;p&gt; 归纳公理       数学归纳法 &lt;/p&gt;
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt; 最小自然数原理 最大自然数原理  &lt;/p&gt;
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt; 第二种数学归纳法  盒子原理&lt;br&gt;
+      &lt;p&gt;记NOIP2017&lt;/p&gt;
     
     </summary>
     
