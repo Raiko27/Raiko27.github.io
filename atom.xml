@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://raikoblog.tk/"/>
-  <updated>2017-05-06T10:13:06.000Z</updated>
+  <updated>2017-11-25T14:03:35.000Z</updated>
   <id>http://raikoblog.tk/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>但愿一切重来</title>
+    <link href="http://raikoblog.tk/2017/11/25/number/"/>
+    <id>http://raikoblog.tk/2017/11/25/number/</id>
+    <published>2017-11-25T14:03:21.000Z</published>
+    <updated>2017-11-25T14:03:35.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>记NOIP2017</p>
+<a id="more"></a>
+<h3 id="NOIP2017"><a href="#NOIP2017" class="headerlink" title="NOIP2017"></a>NOIP2017</h3><p>待更</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记NOIP2017&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="数论" scheme="http://raikoblog.tk/tags/%E6%95%B0%E8%AE%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>2017上海省选游记</title>
@@ -53,29 +76,6 @@
     
     
       <category term="Oi经历" scheme="http://raikoblog.tk/tags/Oi%E7%BB%8F%E5%8E%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>但愿一切重来</title>
-    <link href="http://raikoblog.tk/2017/04/04/number/"/>
-    <id>http://raikoblog.tk/2017/04/04/number/</id>
-    <published>2017-04-03T16:48:21.000Z</published>
-    <updated>2017-11-25T13:53:55.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>记NOIP2017</p>
-<a id="more"></a>
-<h3 id="NOIP2017"><a href="#NOIP2017" class="headerlink" title="NOIP2017"></a>NOIP2017</h3><p>待更</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;记NOIP2017&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="数论" scheme="http://raikoblog.tk/tags/%E6%95%B0%E8%AE%BA/"/>
     
   </entry>
   
